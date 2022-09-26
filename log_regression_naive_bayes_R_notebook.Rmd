@@ -1,0 +1,141 @@
+---
+title: "Regression"
+author: "Haniyyah Hamid and Jered Hightower"
+date: "9/20/2022"
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+---
+https://www.kaggle.com/datasets/vicsuperman/prediction-of-music-genre
+
+## How Linear Models for Classification Work: Strengths and Weaknesses
+Linear models for classification find a decision boundary between classes. As with any other linear algorithm, it will perform poorly where there are non-linear relationships, it's biased. However, logistic regression is strong when the data is linear and are fairly easy to interpret.
+
+## Reading in data
+```{r}
+df <- read.csv(file = 'music_genre.csv', header=T, stringsAsFactors=T)
+str(df)
+```
+## Subset the data frame
+```{r}
+df <- df[,c(4, 6, 18)]
+df$danceability <- factor(df$danceability)
+df$music_genre <- factor(df$music_genre)
+
+head(df)
+```
+## Delete the NAs from the factors
+```{r}
+df <- df[!is.na(df$popularity),]
+df <- df[!is.na(df$music_genre),]
+df <- df[!is.na(df$danceability),]
+
+df$music_genre <- factor(df$music_genre)
+```
+
+## 80/20 train and test
+```{r}
+set.seed(1234)
+i <- sample(1:nrow(df), 0.80*nrow(df), replace=FALSE)
+train <- df[i,]
+test <- df[-1,]
+```
+
+## 2 graphs displaying the training data
+```{r}
+par(mfrow=c(1,2))
+plot(train$popularity, train$music_genre, main="music_genre", ylab="")
+plot(train$popularity, train$danceability, main="danceability", ylab="")
+```
+
+## Building a logistic regression model
+```{r}
+glm1 <- glm(music_genre~popularity, data=train, family=binomial)
+summary(glm1)
+```
+
+## Predict and Evaluate on Test Data
+### Calculating accuracy
+```{r}
+probs <- predict(glm1, newdata=test, type="response")
+
+pred <- ifelse(probs>.87, 10, ifelse(probs>0.83, 9, ifelse(probs>0.8, 8, ifelse(probs>0.77, 7, ifelse(probs>0.73, 6, ifelse(probs>0.7, 5, ifelse(probs>0.67, 4, ifelse(probs>0.66, 3, ifelse(probs>0.65, 2, 1)))))))))
+
+
+summary(factor(pred))
+
+
+acc <- mean(pred==test$music_genre)
+print(paste("Accuracy: ", acc))
+```
+
+The summary shows that deviance residuals range was from -3.8966 to 0.4703. We see by the AIC score that it is incredibly high, 4282.4. We can see that accuracy is incredibly low, close to 0. Therefore, perhaps this model does not well suit the data.
+
+## Sensitivity, Specificity & Kappa
+```{r}
+require(caret)
+#confusionMatrix(as.factor(pred), reference=test$music_genre)
+```
+
+## ROC Curve and AUC
+```{r}
+# Not applicable
+```
+
+```{r}
+# Not applicable
+```
+
+## Matthew's Correlation Coefficient
+```{r}
+# Not applicable
+```
+
+
+## Creating Naive Bayes model
+```{r}
+library(e1071)
+nb1 <- naiveBayes(music_genre~., data=train)
+# nb1
+```
+
+## Predict and Evaluate on Test Data
+### Calculating accuracy
+```{r}
+p1 <- predict(nb1, newdata=test, type="class")
+# table(p1, test$music_genre)
+mean(p1==test$music_genre)
+```
+
+We see based off the naive bayes model that the accuracy is higher than what the accuracy was for logistic regression. We also see that the A-priori probabilities for many of the columns are very close to 0. We found that the accuracy was 0.1261025, therefore even though it was higher than the accuracy of the logistic regression model, it's still not an accurate enough model for the data.
+
+## Sensitivity, Specificity & Kappa
+```{r}
+require(caret)
+#confusionMatrix(as.factor(p1), reference=test$music_genre)
+```
+
+## ROC Curve and AUC
+```{r}
+# Not applicable
+```
+
+```{r}
+# Not applicable
+```
+
+## Matthew's Correlation Coefficient
+```{r}
+# Not applicable
+```
+
+## Comparing both models
+
+Earlier, we saw that the Naive Bayes model held more accuracy than the Logistic regression model did, but not accurate enough to be a perfect fit model of the data. Both models ended up not having a high accuracy towards the data and it may be because the popularity of a song probably does not have a high correlation to the music genre it is. It must have much more variance and less bias.
+
+## Strengths and weaknesses of Naive Bayes and Logistic Regression
+Strengths of logistic regression includes how it can separate classes nicely if the classes themselves are linearly separable, it can be computationally inexpensive, and it can also have good probabilistic output.
+A weakness of logistic regression is that it is likely that it can underfit the data, meaning not be able to capture the outliers and boundaries.
+Strengths of Naive Bayes includes how it can work well with small data sets, it is easy to implement and understand, and it can handle high dimensions.
+Weaknesses of Naive Bayes includes how it can be outperformed by other classifying models when it comes to large data sets, it makes guesses for values in the test set that may not have occurred in the training set, and if predictors are not independent then assumption that they are instead may reduce the performance of the algorithm overall.
