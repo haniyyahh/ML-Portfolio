@@ -11,4 +11,4 @@ The documentation for this program can be found [here](https://github.com/haniyy
 
 ## Linear Models
 A link to the analysis of the number of Upvotes a post gets in relation to the user's reputation, total views, and total answers can be found [here](https://github.com/haniyyahh/ML_Portfolio/blob/main/linear_regression_RNotebook.pdf). It utilizes a linear regression model.
-A link to the analysis of the effect of different music genres on the popularity of songs can be found [here](https://github.com/haniyyahh/ML_Portfolio/blob/main/log_regression_naive_bayes_R_notebook.Rmd). It utilizes logistic regression and Naive Bayes models.
+A link to the analysis of the effect of different music genres on the popularity of songs can be found [here](https://github.com/haniyyahh/ML_Portfolio/blob/main/Classification_RNotebook.pdf). It utilizes logistic regression and Naive Bayes models.
