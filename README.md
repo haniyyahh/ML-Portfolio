@@ -17,3 +17,10 @@ A link to the analysis of the effect of different music genres on the popularity
 The link to the C++ file for Logistic Regression is [here](https://github.com/haniyyahh/ML_Portfolio/blob/main/MLScratch2.cpp).
 The link to the C++ file for Naive Bayes is [here](https://github.com/haniyyahh/ML_Portfolio/blob/main/NaiveBayes.cpp).
 The documentation for this component is [here](https://github.com/haniyyahh/ML_Portfolio/blob/main/ML%20Algorithms%20from%20Scratch%20Documentation.pdf).
+
+## Searching for Similarity
+The link to Notebook 1 is [here]().
+The link to Notebook 2 is [here]().
+The link to Notebook 3 is [here]().
+The link to Notebook 4 is [here]().
+The link to the narrative discussing these similarity models, clustering methods, and dimensionality reduction techniques is [here]().
