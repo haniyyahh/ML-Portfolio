@@ -19,8 +19,8 @@ The link to the C++ file for Naive Bayes is [here](https://github.com/haniyyahh/
 The documentation for this component is [here](https://github.com/haniyyahh/ML_Portfolio/blob/main/ML%20Algorithms%20from%20Scratch%20Documentation.pdf).
 
 ## Searching for Similarity
-The link to Notebook 1 is [here]().
-The link to Notebook 2 is [here]().
-The link to Notebook 3 is [here]().
-The link to Notebook 4 is [here]().
-The link to the narrative discussing these similarity models, clustering methods, and dimensionality reduction techniques is [here]().
+The link to Notebook 1 is [here](https://github.com/haniyyahh/ML_Portfolio/blob/main/N1-Regression.pdf).
+The link to Notebook 2 is [here](https://github.com/haniyyahh/ML_Portfolio/blob/main/Notebook2.pdf).
+The link to Notebook 3 is [here](https://github.com/haniyyahh/ML_Portfolio/blob/main/Notebook3-compressed.pdf).
+The link to Notebook 4 is [here](https://github.com/haniyyahh/ML_Portfolio/blob/main/Notebook4.pdf).
+The link to the narrative discussing these similarity models, clustering methods, and dimensionality reduction techniques is [here](https://github.com/haniyyahh/ML_Portfolio/blob/main/ML_%20Searching%20for%20Similarity.pdf).
