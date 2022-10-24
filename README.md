@@ -29,4 +29,4 @@ The link to the narrative discussing these similarity models, clustering methods
 The link to Notebook 1 is [here](https://github.com/haniyyahh/ML_Portfolio/blob/main/SVM_Regression_Notebook1.pdf).
 The link to Notebook 2 is [here](https://github.com/haniyyahh/ML_Portfolio/blob/main/Notebook2Classification.pdf).
 The link to Notebook 3 is [here](https://github.com/haniyyahh/ML_Portfolio/blob/main/Notebook3Ensemble.pdf).
-The link to the narrative discussing SVM regression, classification, and the ensemble methods used in the notebooks is [here]().
+The link to the narrative discussing SVM regression, classification, and the ensemble methods used in the notebooks is [here](https://github.com/haniyyahh/ML_Portfolio/blob/main/Narrative%20-%20Kernel%20and%20Ensemble%20Methods.pdf).
