@@ -32,4 +32,4 @@ The link to Notebook 3 is [here](https://github.com/haniyyahh/ML_Portfolio/blob/
 The link to the narrative discussing SVM regression, classification, and the ensemble methods used in the notebooks is [here](https://github.com/haniyyahh/ML_Portfolio/blob/main/Narrative%20-%20Kernel%20and%20Ensemble%20Methods.pdf).
 
 ## ML with skLearn
-The link to the pdf which covers several different algorithms performing over the auto dataset including neural networks, is [here]().
+The link to the pdf which covers several different algorithms performing over the auto dataset including neural networks, is [here](https://github.com/haniyyahh/ML_Portfolio/blob/main/ml_with_skLearn.pdf).
