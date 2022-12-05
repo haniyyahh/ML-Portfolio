@@ -35,4 +35,4 @@ The link to the narrative discussing SVM regression, classification, and the ens
 The link to the pdf which covers several different algorithms performing over the auto dataset including neural networks, is [here](https://github.com/haniyyahh/ML_Portfolio/blob/main/ml_with_skLearn.pdf).
 
 ## Image Classification
-The link to the pdf is [here]().
+The link to the pdf is [here](https://github.com/haniyyahh/ML_Portfolio/blob/main/KerasImageClassification.pdf).
