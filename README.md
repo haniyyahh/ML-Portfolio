@@ -36,3 +36,4 @@ The link to the pdf which covers several different algorithms performing over th
 
 ## Image Classification
 The link to the pdf is [here](https://github.com/haniyyahh/ML_Portfolio/blob/main/KerasImageClassification.pdf).
+The link to the dataset used is [here](https://www.kaggle.com/datasets/zalando-research/fashionmnist).
